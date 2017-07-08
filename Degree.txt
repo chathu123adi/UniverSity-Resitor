@@ -1,0 +1,31 @@
+package com.university;
+
+
+public class Degree {
+    private int degreeId;
+    private String degreeName;
+    private Module[] modules;
+
+    private final int MAX_MODULES;
+    private static int currentIndex = 0;
+
+    public Degree(int degreeId, String degreeName, int maxModules){
+        MAX_MODULES = maxModules;
+        this.degreeId = degreeId;
+        this.degreeName = degreeName;
+
+        modules = new Module[MAX_MODULES];
+    }
+
+    public void AddModules(Module[] modules){
+        this.modules = modules;
+        this.currentIndex = modules.length;
+    }
+
+    public void AddModule(Module module){
+        if (currentIndex < MAX_MODULES) {
+            modules[currentIndex] = module;
+            currentIndex++;
+        }
+    }
+}

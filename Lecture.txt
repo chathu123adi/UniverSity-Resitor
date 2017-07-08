@@ -1,0 +1,8 @@
+package com.university;
+
+
+public class Lecturer {
+    private String lecturerId;
+
+    //implement the rest of the class ass needed
+}
